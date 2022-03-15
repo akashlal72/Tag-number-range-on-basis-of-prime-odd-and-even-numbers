@@ -1,0 +1,36 @@
+def check(x): #function to check enterd element is integer or not
+    try:
+        x = int(x)
+    except:
+        x = -1
+    if x<0:
+        print("Please enter only number please like 1,2,3...")
+    else:
+        pass
+start = input("please enter starting number: ")
+check(start)                                  #check the value is integer 
+start = int(start)
+end = input("Please enter last number: ")
+check(end)
+end = int(end)
+    
+
+for i in range(start,end+1):     #prime number loop
+    if i>1:
+        for j in range(2,i):
+            if i % j ==0:
+                break
+            
+        else:
+            print("I am prime number and",end = " ")
+    if i % 2 == 0:
+        print("i am even number {}".format(i))            
+                
+    else:
+        print("I am odd number {}".format(i))
+for i in range(1,end+1):
+    for j in range(1,i+1):
+        if i% j == 0:
+            break
+        else:
+            print("I am prime also")
